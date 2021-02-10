@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!--{{{-->
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css">
+
+	<title> Ph.D. Thesis LaTeX </title>
+	<meta property="og:title" content="LaTeX class for Ph.D. Thesis" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:url" content="https://ph-moura.github.io/PED-F128/" />
+	<meta property="og:site_name" content="LaTeX class for Ph.D. Thesis" />
+</head>
+<!--}}}--> 
+
+<!--{{{-->
+<header>
+<h1>Ph.D. Thesis</h1>
+<blockquote>
+<p>LaTeX class for the Ph.D. thesis</p>
+</blockquote>
+</header>
+
+<!--}}}--> 
+<body>
+
+<!-- TABLE OF CONTENTS -->
+<!--{{{-->
+<section id="toc">
+<h2><a id="table-of-contents" href="#table-of-contents"></a>Table of Contents</h2>
+<ol>
+	<li><a href="#description">Description.</a></li>
+	<li><a href="#installation">Installation.</a></li>
+	<li><a href="#usage">Usage.</a>
+	<ul>
+		<li><a href="#useful-commands"> Useful commands. </a></li>
+		<li><a href="#some-suggested-packages"> Some Suggested Packages. </a></li>
+		<li><a href="#handling-figures-and-tables"> Handling Figures and Tables.</a></li>
+	</ul>
+	<li><a href="#sample">Sample</a></li>
+</ol>
+</section>
+<!--}}}--> 
+
+<!-- DESCRIPTION -->
+<!--{{{-->
+<section>
+<h2><a name="description"></a>1. Description</h2>
+<p>This is a LaTeX class for the Ph.D. thesis.</p>
+
+
+
+</section>
+<!--}}}--> 
+
+<!-- INSTALATION -->
+<!--{{{-->
+<section>
+<h2><a name="installation"></a>2. Installation</h2>
+<p>To use locally just put the file <em>phd-thesis.cls</em> in the same directory as the document.</p>
+
+
+</section>
+<!--}}}--> 
+
+<!-- USAGE -->
+<!--{{{-->
+<section>
+<h2><a name="usage" ></a>3. Usage</h2>
+<p>To load the class, use the following comand:</p>
+
+<div class="highlight-latex">
+<span class="tex-dcl">\documentclass</span>[<span class="tex-dcl-opt">oneside</span>]{<span class="tex-dcl-arg">phd-thesis</span>}
+</div>
+
+<p>By default, the <em>a4paper</em> and <em>12pt</em> are passed. The <em>[oneside]</em> is optional. Some macros are defined</p>
+
+<div class="highlight-latex"> 
+<table><tr>
+<td>
+<pre class="tex-col-num">
+1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17</td><td>
+<pre class="tex-col">
+<span class="tex-dcl">\documentclass</span>[<span class="tex-dcl-opt">oneside</span>]{<span class="tex-dcl-arg">phd-thesis</span>}
+<span class="tex-mac">\title</span>{}	<span class="tex-com"> </span>
+<span class="tex-mac">\author</span>{}	<span class="tex-com"> </span>
+<span class="tex-mac">\supervisor</span>{}	<span class="tex-com"> </span>
+<span class="tex-mac">\cosupervisor</span>{}<span class="tex-com"> % Optional </span>
+<span class="tex-mac">\institute</span>{}	<span class="tex-com"> </span>
+<span class="tex-mac">\university</span>{}	<span class="tex-com"> </span>
+<span class="tex-mac">\location</span>{}	<span class="tex-com"> </span>
+<span class="tex-mac">\logo</span>[align=left, width=1cm]{Path/to/logo}<span class="tex-com"> % Default: align=center, width=2cm  </span>
+<span class="tex-mac">\facepagetext</span>{}	<span class="tex-com"> </span>
+
+<span class="tex-mac">\begin</span>{document}
+
+<span class="tex-mac">\maketitle</span>
+<span class="tex-mac">\coverpage</span>
+
+<span class="tex-mac">\end</span>{document}
+</td> </tr>
+</table>
+</pre>
+</div>
+
+
+<p>These macros set the <em>title</em>, the <em>author</em>, the <em>supervisor</em>, the <em>co-supervisor</em> (optional), the name of the <em>Institute</em>, the name of the <em>University</em>, the <em>city</em>, the <em>logo</em> (optional) and the text for the cover page, respectively.</p>
+
+
+
+
+</section>
+
+<!--}}}--> 
+
+<!-- USEFUL COMMANDS -->
+<!--{{{-->
+<section>
+<h3><a name="useful-commands"></a>3.1 Useful commands</h3>
+
+
+
+
+</section>
+<!--}}}--> 
+
+<!-- SOME SUGGESTED PACKAGES -->
+<!--{{{-->
+<section>
+<h3><a name="some-suggested-packages"></a>3.2 Some Suggested Packages</h3>
+
+
+
+
+</section>
+<!--}}}--> 
+
+<!-- HANDLING FIGURES AND TABLES -->
+<!--{{{-->
+<section>
+<h3><a name="handling-figures-and-tables"></a>3.3 Handling Figures and Tables</h3>
+
+</section>
+
+<!--}}}--> 
+
+<!--SAMPLE -->
+<!--{{{-->
+<section id="pdf_content">
+	<h2 id="sample_pdf" name="sample">4. Sample PDF </h2>
+	<iframe src="files/main.pdf#toolbar=1" width="100%" height="750"></iframe>
+</section>
+
+<!--}}}--> 
+
+</body>
+
+<!--{{{-->
+<footer>
+
+</footer>
+<!--}}}--> 
+
+</html>
