@@ -30,29 +30,34 @@
 
 <!-- TABLE OF CONTENTS -->
 <!--{{{-->
-<section id="toc">
+<div id="toc", class="side_margin">
 <h2><a id="table-of-contents" href="#table-of-contents"></a>Table of Contents</h2>
 <ol>
 	<li><a href="#description">Description.</a></li>
 	<li><a href="#installation">Installation.</a></li>
 	<li><a href="#usage">Usage.</a>
 	<ul>
-		<li><a href="#guide-for-the-commands"> Guide for the commands. </a></li>
+		<li><a href="#guide-for-the-commands">Guide for the commands.</a></li>
 			<ul>
 				<li><a href="#title">Title</a></li>
-				<li><a href="#abstract">Abstract</a></li>
+ 				<li><a href="#abstract">Abstract</a></li>
 			</ul>
-		<li><a href="#useful-commands"> Useful commands. </a></li>
+		<li><a href="#useful-commands">Useful commands.</a></li>
 			<ul>
-				<li><a href="#bras-kets-and-all-that">Bras, Kets and all that</a></li>
+ 				<li><a href="#bras-kets-and-all-that">Bras, Kets and all that</a></li>
 			</ul>
-		<li><a href="#some-suggested-packages"> Some Suggested Packages. </a></li>
-		<li><a href="#handling-figures-and-tables"> Handling Figures and Tables.</a></li>
+		<li><a href="#some-suggested-packages">Some Suggested Packages.</a></li>
+		<li><a href="#handling-figures-and-tables">Handling Figures and Tables.</a></li>
 	</ul>
 	<li><a href="#sample">Sample</a></li>
 </ol>
-</section>
+
+<div id="copyright"> &#169; 2021 Paulo Henrique de Moura</div>
+
+</div>
 <!--}}}--> 
+
+<div class="content">
 
 <!-- DESCRIPTION -->
 <!--{{{-->
@@ -101,12 +106,12 @@
 
 <span class="tex-com">% Back cover text</span>
 <span class="tex-env">\backcover</span>{
-	<span class="tex-dcl-opt">first language</span>={
+	<span class="tex-dcl-opt">first text</span>={
 		Thesis presented to the <span class="tex-mac">\theinstitute</span>~of the <span class="tex-mac">\theuniversity</span>~in partial 
 		fulfillment of the requirements for the degree of <span class="tex-env">\uppercase</span>{Master Jedi}, 
 		in the area of <span class="tex-env">\uppercase</span>{Jedi Guardian}.
 	},
-	<span class="tex-dcl-opt">second language</span>={
+	<span class="tex-dcl-opt">second text</span>={
 		Tese apresentada ao <span class="tex-mac">\theinstitute[2]</span>~da <span class="tex-mac">\theuniversity[2]</span>~como parte 
 		dos requisitos exigidos para a obtenção do título de <span class="tex-env">\uppercase</span>{Mestre Jedi}, 
 		na Área de <span class="tex-env">\uppercase</span>{Jedi Guardião}.
@@ -154,11 +159,11 @@
 <!--{{{-->
 
 <section>
-<h3><a name="guide-for-the-command"></a>3.1 Guide for the commands</h3>
+<h3><a name="guide-for-the-commands"></a>3.1 Guide for the commands</h3>
 
 <!--{{{ TITLE -->
 <h4><a name="title"></a> Title </h4>
-<p> The <em>title</em> and the <em> subtitle</em>, can be handled by the macros <code><span class="tex-env">\title</span>[]{} </code> and <code><span class="tex-env">\subtitle</span>[]{}</code>. Both macros have one mandatory and one optional argument. The optional argument is used to set the title (or subtitle) in a secondary language (by secondary language I mean the one that is not the used in the main part of the text). For example: if the text is written in english, one must set the portuguese as a secondary language. Once seted the title, its content can be obtained by means of the <code><span class="tex-env">\thetitle</span></code> command. To get the value passed through the optional argument of the title command, just use: <code><span class="tex-env">\thetitle</span>[2]</code>. The same for the subtitle.
+<p> The <em>title</em> and the <em> subtitle</em>, can be handled by the macros <code><span class="tex-env">\title</span>[]{}</code> and <code><span class="tex-env">\subtitle</span>[]{}</code>. Both macros have one mandatory and one optional argument. The optional argument is used to set the title (or subtitle) in a secondary language (by secondary language I mean the one that is not the used in the main part of the text). For example: if the text is written in english, one must set the portuguese as a secondary language. Once seted the title, its content can be obtained by means of the <code><span class="tex-env">\thetitle</span></code> command. To get the value passed through the optional argument of the title command, just use: <code><span class="tex-env">\thetitle</span>[2]</code>. The same for the subtitle.
 
 </p>
 
@@ -173,24 +178,42 @@ The <em>abstract</em>  environment has the following usage:
 <div class="highlight-latex"> 
 <table><tr>
 <td><pre class="tex-col-num">
-1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19
+1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<!--<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56<br>57<br>58<br>59<br>60 --> 
 </td> <td><pre class="tex-col">
 <span class="tex-dcl">\documentclass</span>[<span class="tex-dcl-opt">oneside</span>]{<span class="tex-dcl-arg">phd-thesis</span>}
 <span class="tex-env">\begin</span><span class="tex-del">{document}</span>
 
 <span class="tex-env">\begin</span><span class="tex-del">{abstract}</span>
 <span class="tex-com">% Write your abstract here</span>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 <span class="tex-env">\end</span><span class="tex-del">{abstract}</span>
 
 <span class="tex-env">\begin</span><span class="tex-del">{abstract}</span>[name=Resumo]
 <span class="tex-com">% Write your abstract here</span>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 <span class="tex-env">\end</span><span class="tex-del">{abstract}</span>
 
-<span class="tex-env">\begin</span><span class="tex-del">{abstract}</span>[name=Resumo, header={LAST NAME, Name, Ph.D., Name of the University, February, 2021. {\bf Title of the thesis}. Supervisor: Name of the Advisor. Co-supervisor: Name of the Co-supervisor.}]
+<span class="tex-env">\begin</span><span class="tex-del">{abstract}</span>[
+	name=Resumo, 
+	header={ LAST NAME, Name, Ph.D., Name of the University, February, 2021. 
+			{\bf Title of the thesis}. Supervisor: Name of the Advisor. 
+			Co-supervisor: Name of the Co-supervisor.
+		}
+	]
 <span class="tex-com">% Write your abstract here</span>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 <span class="tex-env">\end</span><span class="tex-del">{abstract}</span>
 
 <span class="tex-env">\end</span><span class="tex-del">{document}</span>
@@ -279,18 +302,14 @@ The code above gives us the following:
 <!--SAMPLE -->
 <!--{{{-->
 <section id="pdf_content">
-	<h2 id="sample_pdf" name="sample">4. Sample PDF </h2>
+	<h2 id="sample" name="sample">4. Sample PDF </h2>
 	<iframe src="files/main.pdf#toolbar=1" width="100%" height="750"></iframe>
 </section>
 
 <!--}}}--> 
 
+</div>
+
 </body>
-
-<!--{{{-->
-<footer>
-
-</footer>
-<!--}}}--> 
 
 </html>
